@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root{
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-filed: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 24px;
+            text-align: start;
+        }
+        .form, .form div{
+            display: flex;
+            flex-direction: column;
+        }
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .value{
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            margin-bottom: 8px 0 32px 0;
+        }
+        .secondary-button{
+            background-color: var(--white);
+            border: 1px solid var(--hospital-green);
+            border-radius: 8px;
+            color: var(--hospital-green);
+            height: 48px;
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .login-button{
+            margin-top: 12px;
+            margin-bottom: 32px;
+        }
+        @media (max-width: 640px){
+            .form-container{
+                height: 100%;
+            }
+            .form{
+                height: 100%;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="login">
+        <div class="form-container">
+            <h1 class="title">My account</h1>
+
+            <form action="/" class="form">
+                <div>
+                    <label for="password" class="label">Name</label>
+                    <p type="text" class="value" id="name">Your name here</p>
+    
+                    <label for="new-password" class="label">Email address</label>
+                    <p type="password" class="value" id="new-password">your@email.com</p>
+    
+                    <label for="password" class="label">Password</label>
+                    <p type="password" class="value" id="password">********</p>
+                </div>
+
+
+                <input type="submit" class="secondary-button login-button" value="Edit">
+            </form>
+        </div>
+    </section>
+</body>
+</html>
